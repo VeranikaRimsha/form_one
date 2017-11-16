@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+	<meta charset="UTF-8">
+	<title>form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		.form-author-wrapper, .form-article-wrapper, .form-heading-wrapper, .form-allow-wrapper,
+		.form-publication-wrapper, .form-text-wrapper {
+			padding-bottom: 1.5em;
+		}
+		
+		.form-author-wrapper label,
+		.form-article-wrapper label,
+		.form-allow-wrapper label,
+		.form-heading-wrapper label {
+			width: 200px;
+			float:left;
+			vertical-align: bottom;
+		}
+		
+		.form-author__input, .form-article__input {
+			width: 100%;
+			
+		}
+		.form_{
+			margin-left: 200px;
+		}
+		
+		@media screen and (max-width: 280px) and (orientation: portrait) {
+			.form_{
+				margin-left: 0;
+			}
+			.form-text-wrapper {
+				overflow: hidden;
+			}
+		}
+	</style>
+</head>
+<body>
+<form method=post action='http://fe.it-academy.by/TestForm.php'>
+	
+	<div class="form-author-wrapper">
+		
+		<label for="author">
+			<span> Автор(авторы): </span>
+		</label>
+		
+		<div class="form_">
+			<input type='text' name='fio' id="author" class="form-author__input">
+		</div>
+	</div>
+	
+	<div class="form-article-wrapper">
+		
+		<label for="article">
+			<span> Название статьи: </span>
+		</label>
+		
+		<div class="form_">
+			<input type='text' name='statya' id="article" class="form-article__input">
+		</div>
+	</div>
+	
+	<div class="form-heading-wrapper">
+		
+		<label for="heading">
+			<span> Рубрика: </span>
+		</label>
+		
+		<div class="form_">
+			<select name='active' id="heading">
+				<option value=1> медицина</option>
+				<option value=2> косметология</option>
+				<option value=3 selected> программирование</option>
+				<option value=4> web-дизайн</option>
+			</select>
+		</div>
+	</div>
+	
+	<div class="form-publication-wrapper">
+		
+			<label for="publication_">
+				<span> Публикация: </span>
+			</label>
+		
+		<div class="form_">
+			<label for="publication_">
+				<input type='radio' name='answer' value=5 id="publication_"> на сайте
+			</label>
+			<label for="publication__">
+				<input type='radio' name='answer' value=6 id="publication__"> в журнале
+			</label>
+			<label for="publication___">
+				<input type='radio' name='answer' value=7 id="publication___"> на сайте и в журнале
+			</label>
+		</div>
+	</div>
+	
+	
+	<div class="form-allow-wrapper">
+		<label for="comment">
+			<span>Разрешить комментарии:</span>
+		</label>
+		<input type='checkbox' name='allow' id="comment" checked>
+	</div>
+	
+	
+	<div class="form-text-wrapper">
+		
+		<label for="article_text">
+			<span> Текст статьи:</span>
+		</label>
+			<textarea rows="10" cols="190" name='article_text_' id="article_text"></textarea>
+	</div>
+	
+	
+	<div class="form-finish">
+		<label> <input type='submit' value='Опубликовать'> </label>
+	</div>
+	
+</form>
+</body>
+</html>
+<ul>
+	<li>
+		<label for=""></label>
+		<input type="text">
+	</li>
+	<li>
+		<label for=""></label>
+		<input type="text">
+	</li>
+	<li>
+		<label for=""></label>
+		<input type="text">
+	</li>
+	
+</ul>
